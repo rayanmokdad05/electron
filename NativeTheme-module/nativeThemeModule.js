@@ -37,10 +37,7 @@ app.whenReady().then(() => {
   // Gérer les demandes de changement de thème depuis le rendu
   ipcMain.on("toggle-theme", () => {
     nativeTheme.themeSource =
+      // verifie theme actuel avec themeSource (si dark alors light sinon dark)
       nativeTheme.themeSource === "dark" ? "light" : "dark";
-  });
-
-  app.on("window-all-closed", () => {
-    if (process.platform !== "darwin") app.quit();
   });
 });

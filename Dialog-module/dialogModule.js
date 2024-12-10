@@ -21,8 +21,8 @@ ipcMain.handle("affiche-open-dialog", async () => {
     title: "Choisissez un fichier",
     properties: ["openFile", "multiSelections"],
     filters: [
-      { name: "Images", extensions: ["jpg", "png", "gif"] },
       { name: "Tous les fichiers", extensions: ["*"] },
+      { name: "Images", extensions: ["jpg", "png", "gif"] },
     ],
   });
   return result.filePaths; // Retourne les fichiers sélectionnés
@@ -49,8 +49,4 @@ ipcMain.handle("affiche-message-box", async () => {
 
 app.whenReady().then(() => {
   createWindow();
-
-  app.on("window-all-closed", () => {
-    if (process.platform !== "darwin") app.quit();
-  });
 });

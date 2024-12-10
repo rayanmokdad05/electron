@@ -15,5 +15,5 @@ const { app } = require("electron");
 //require("./Exercice2/exercice2.js");
 //require("./Exercice3/exercice3.js");
 //require("./Exercice4/exercice4.js");
-require("./Exercice5/exercice5.js");
+//require("./Exercice5/exercice5.js");
 app.on("ready", () => {});

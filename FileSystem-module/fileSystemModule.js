@@ -9,7 +9,7 @@ function createWindow() {
   mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
-    show: false, // Ne pas afficher la fenêtre immédiatement
+    show: false,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
@@ -141,7 +141,7 @@ app.whenReady().then(() => {
   //modifierFic(filePath, "Contenu modifié du fichier.");
 
   // Supprimer le fichier
-  //supFic(filePath);
+  // supFic(filePath);
 
   // Créer un répertoire
   //creerRepertoire(dirPath);
@@ -154,8 +154,4 @@ app.whenReady().then(() => {
 
   // Vérifier si un fichier existe
   //ficExiste(fic);
-
-  app.on("window-all-closed", () => {
-    if (process.platform !== "darwin") app.quit();
-  });
 });
